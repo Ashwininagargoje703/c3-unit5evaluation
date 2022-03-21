@@ -1,0 +1,92 @@
+
+{
+"books": [
+      {
+          "title":"Wings of Fire ",
+          "imageUrl":"https://play-lh.googleusercontent.com/J8tWus-62iqsQF1O6SMr4A726soHe7Xi7f_kezso3RHGQdCMljXOk8wCClqE5Yxu2V0U0dfXGonf_Q=s200-rw",
+          "description":"“We are all born with a divine fire in us. Our efforts should be to give wings to this fire President Kalam’s inspiring autobiography has touched the hearts of people all over theworld",
+          "reviews":[
+              "422"
+          ],
+          "author":"Abdul Kalam",
+          "price": 699,
+          "section": "Section as mentioned in problem statement",
+          "isbnNumber": 1234567
+       },
+  
+{
+  "title":"The Laws of Human Nature ",
+  "imageUrl":"https://images-na.ssl-images-amazon.com/images/I/41PUWqRghSL._SX323_BO1,204,203,200_.jpg",
+  "description":"From the #1 <i>New York Times</i>-bestselling author of <i>The 48 Laws of Power</i> comes the definitive new book on decoding the behaviour of the people around you",
+  "reviews":[
+      "6,650"
+  ],
+  "author":"Robert Greene",
+  "price": 599,
+  "section": "eaches you how to cheat, dissemble, feign, fight and advance your cause in the modern ",
+  "isbnNumber": 1234567
+},
+{
+  "title":"Target 3 Billion",
+  "imageUrl":"https://m.media-amazon.com/images/I/51Pciab+RZL._SL500_.jpg",
+  "description":"With 750 million people living in villages, India has the largest rural population in the world. Based on his Indian experience, Dr Kalam recommends a sustainable and inclusive development system called PURA - Providing Urban Amenities in Rural Areas - to uplift the rural masses not by subsidies but through entrepreneurship with community participation. ",
+  "reviews":[
+      "27514"
+  ],
+  "author":"A. P. J. Kalam",
+  "price": 6499,
+  "section": "Abdul Kalam and Srijan Pal (P)2020 Random House Audio",
+  "isbnNumber": 1234567
+},
+{
+  "title":"Pegasus Famous Authors Book - English",
+  "imageUrl":"https://cdn.fcglcdn.com/brainbees/images/products/438x531/1034388a.webp",
+  "description":"Book desc",
+  "reviews":[
+      "multiple reviews here"
+  ],
+  "author":"Book Author",
+  "price": 1234,
+  "section": "Section as mentioned in problem statement",
+  "isbnNumber": 1234567
+},
+{
+  "title":"Pegasus Famous Authors Book - English",
+  "imageUrl":"https://cdn.fcglcdn.com/brainbees/images/products/438x531/1034388a.webp",
+  "description":"Book desc",
+  "reviews":[
+      "multiple reviews here"
+  ],
+  "author":"Book Author",
+  "price": 1234,
+  "section": "Section as mentioned in problem statement",
+  "isbnNumber": 1234567
+},
+{
+  "title":"Wings of Fire ",
+  "imageUrl":"https://play-lh.googleusercontent.com/J8tWus-62iqsQF1O6SMr4A726soHe7Xi7f_kezso3RHGQdCMljXOk8wCClqE5Yxu2V0U0dfXGonf_Q=s200-rw",
+  "description":"“We are all born with a divine fire in us. Our efforts should be to give wings to this fire President Kalam’s inspiring autobiography has touched the hearts of people all over theworld",
+  "reviews":[
+      "422"
+  ],
+  "author":"Abdul Kalam",
+  "price": 699,
+  "section": "Section as mentioned in problem statement",
+  "isbnNumber": 1234567
+},
+{
+  "title":"Target 3 Billion",
+  "imageUrl":"https://m.media-amazon.com/images/I/51Pciab+RZL._SL500_.jpg",
+  "description":"With 750 million people living in villages, India has the largest rural population in the world. Based on his Indian experience, Dr Kalam recommends a sustainable and inclusive development system called PURA - Providing Urban Amenities in Rural Areas - to uplift the rural masses not by subsidies but through entrepreneurship with community participation. ",
+  "reviews":[
+      "27514"
+  ],
+  "author":"A. P. J. Kalam",
+  "price": 6499,
+  "section": "Abdul Kalam and Srijan Pal (P)2020 Random House Audio",
+  "isbnNumber": 1234567
+}
+
+
+]
+}
