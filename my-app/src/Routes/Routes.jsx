@@ -4,20 +4,16 @@ import { Section } from "../Components/Section/Section";
 import { BookDetailsPage } from "../Components/BookDetailsPage/BookDetailsPage";
 import { NotFound } from "../Components/NotFound/NotFound";
 import { Navbar } from "../Components/Navbar/Navbar";
-import { BookCard } from "../Components/BookCard/BookCard";
 
 export const AllRoutes = () => {
   return (
-    <>
+    <> 
       <Navbar />
       <Routes>
         <Route exact path="/" element={<Home />} />
-        <Route exact path="/book" element={<BookCard />} />
-        <Route exact path="/bookdetails/:id" element={<BookDetailsPage />} />
-        <Route exact path="/books/undefined" element={<NotFound />} />
-        <Route exact path="/section/" element={<Section />} />
-        {/* Create other routes here: Section, bookdetailspage and 404 */}
-        {/*  */}
+        <Route exact path="/section/:section" element={<Section />} />
+        <Route exact path="/bookdetailspage/:id" element={<BookDetailsPage />} />
+        <Route  path="*" element={<NotFound />} />
       </Routes>
     </>
   );

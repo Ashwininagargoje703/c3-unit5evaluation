@@ -1,11 +1,11 @@
 export const NotFound = () => {
   return (
-    <div className="notFound">
-         <img
-        src="https://cdn.mos.cms.futurecdn.net/PuXipAW3AXUzUJ4uYyxPKC-1200-80.jpg"
-        alt="404error"
-      />
-      {/* Show some 404 not found image or component here */}
+    <div className="notFound" style={{ textAlign: "center" }}>
+        <img
+          src="https://i.pinimg.com/originals/5b/27/01/5b270123bd7f65a53d4f889baa8609d7.gif"
+          alt="#"
+        /> 
+      );
     </div>
   );
 };

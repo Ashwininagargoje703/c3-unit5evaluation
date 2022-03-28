@@ -1,70 +1,46 @@
-import axios from "axios";
-import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
 import { BookCard } from "../BookCard/BookCard";
+import styled from "styled-components";
 import { SortAndFilterButtons } from "../SortAndFilterButtons/SortAndFilterButtons";
+import {useState, useEffect } from "react";
+import axios from "axios";
 
 export const Home = () => {
-  // get all books when user lands on the page
+  const [books, setBooks] = useState([]);
+  useEffect(() => fetchAllBooks(),[]) 
 
-  // populate them as mentioned below
-  const [showbooks, setShowBooks] = useState([]);
-  useEffect(() => {
-    getData();
-  },[])
 
-  const getData = () => {
-    axios.get("http://localhost:8080/books").then((res) => {
-      setShowBooks(...showbooks, res.data)
-    })
-  };
-  console.log(showbooks)
+  function fetchAllBooks(){
+    // axios.get("http://localhost:8080/books").then((res) =>setBooks([...res.data]))
+    axios.get("http://localhost:8080/books/").then((res) =>setBooks([...res.data]))
 
-  
+  }
+ 
+  function handleSort(nameBy,order){
+    console.log(nameBy,order);
+    if(nameBy==='title' && order===1) setBooks((prev)=> [...prev.sort((a,b)=>a.title>b.title?1:-1)])
+    else if(nameBy==='title' && order===-1) setBooks((prev)=> [...prev.sort((a,b)=>a.title>b.title?-1:1)])
+    else if(nameBy==='price' && order===1) setBooks((prev)=> [...prev.sort((a,b)=>a.price>b.price?1:-1)])
+    else if(nameBy==='price' && order===-1) setBooks((prev)=> [...prev.sort((a,b)=>a.price>b.price?-1:1)])
+  }
+
+  const Main = styled.div` 
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:1rem;
+    color:red;
+  `;
 
   return (
-    <div className="homeContainer" style={{
-      justifyContent:"space-evenly",
-      paddingTop:"10px",
-      // display:"flex"
-    }}
-    id="booksShow"
-    >
-      {
-        showbooks.map((el) => {
-          return (
-            <>
-            <div id="products" style={{
-           
-
-            }}>
-              <img src={el.imageUrl} alt="images"></img>
-              <h3 >{el.title}</h3>
-              <h3 >{el.price}</h3>
-              <p>{el.section}</p>
-              <Link to={`/books/${el.id}`}>more details
-              </Link>
-              
-            </div>
-            </>
-          )
-        })
-      }
-      {/* <h2 style={{ textAlign: "center" }}>Home</h2>
+    <div className="homeContainer">
+      <h2 style={{ textAlign: "center" }}>Home</h2>
       <SortAndFilterButtons
-        handleSort={
-          "give handleSort function to this component, that sorts books"
-        }
-      /> */}
+        handleSort={handleSort}
+      />
 
-      {/* <Main className="mainContainer">
-        {/* 
-            Iterate over books that you get from network
-            populate a <BookCard /> component
-            pass down books id, imageUrl, title, price and anything else that you want to 
-            show in books Card.
-        */}
-      {/* </Main> */} */
+      <Main className="mainContainer">
+        {books.map(el=><BookCard key={el._id} id={el._id} title={el.title} imageUrl={el.imageUrl} price={el.price}/>)}
+      </Main>
     </div>
   );
 };
